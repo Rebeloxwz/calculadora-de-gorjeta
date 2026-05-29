@@ -24,3 +24,12 @@ let conta = 0
                             paragrafoErro.style.display = "none"
                             divErro.setAttribute("id","")
                             pessoas = Number(evento.target.value)
+
+                            }
+                         calcular()
+                    }
+
+                    const botoesGorjeta = document.querySelectorAll(".gorjeta input[type='button']")
+                    botoesGorjeta.forEach(botao =>{
+                        botao.addEventListener("click", receberPorcentagem)
+                    })
