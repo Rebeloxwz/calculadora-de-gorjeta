@@ -48,3 +48,21 @@ let conta = 0
                     }else{
                         porcentagem = 0 
                     }
+
+                    calcular()
+                    }
+
+                    const gorjetaInput = document.querySelector("#outra")
+                    gorjetaInput.addEventListener("input", receberPorcentagem)
+
+                    function calcular() {
+                        if(conta !== 0 && porcentagem !== 0 && pessoas !== 0) {
+                const strongGortejaTotal = document.querySelector(".gorjeta-total > strong")
+                strongGortejaTotal.innerHTML = `R$ ${(conta * porcentagem / pessoas).toFixed (2)}`
+
+                const strongTotal = document.querySelector(".total > strong")
+                strongTotal.innerHTML = `R$ ${((conta+ (conta * porcentagem))  / pessoas).toFixed(2)}`
+                
+
+                     }
+                    }
