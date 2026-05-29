@@ -81,8 +81,33 @@ main {
 .conta:has(input:focus) div {
 
 outline: 2px solid var(--light-green);
+
+.conta:has(input:hover) div,
+.pessoas:has(input:focus) .input-box,
+.pessoas:has(input:hover) .input-box,
+.gorjeta #outra:focus,
+.gorjeta #outra:hover {
+    outline: 2px solid var(--light-green);
+    cursor: pointer;
 }
 
+.gorjeta div{
 
+    margin-top: 1rem ;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
 
+.gorjeta input{
+    font-size: 1.5rem;
+    font-weight: 700 ;
+    border: none;
+    text-align: center;
+    outline: none;
+    padding-block: 0.4rem;
+    border-radius: 0.3125rem;
+    background-color: var(--green-800);
+    color: var(--white);
+}
 
