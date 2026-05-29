@@ -1,14 +1,14 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Space Mono", serif;
-}
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Space Mono", serif;
+ }
 
-:root {
-    --green-100: #f3f9fa;
-    --green-200: #c5e4e7;
-    --green-300: #9EBBBD;
+ :root {
+   --green-100: #f3f9fa;
+   --green-200: #c5e4e7;
+   --green-300: #9EBBBD;
    --green-400: #7f9d9f;
    --green-500: #5e7a7d;
    --green-600: #547878;
@@ -16,236 +16,290 @@
    --green-800: #00474b;
    --light-green: #26c2ae;
    --white: #ffff;
-}
+ }
 
-body {
-  background-color: var(--green-200);
-}
+ body {
+   background-color: var(--green-200);
+ }
 
-header {
-  border: 1px solid red;
-  display: flex;
-  justify-content: center;
-  padding-block: 2.8rem;
+ header {
+   display: flex;
+   justify-content: center;
+   padding-block: 2.8rem;
+ }
 
-
-}
-
-main {
-  background-color: var(--white);
+ main {
+   background-color: var(--white);
    padding: 2rem;
-}
+   border-radius: 1.5625rem 1.5625rem 0 0;
+ }
+
+ .conta,
+ .gorjeta,
+ .pessoas {
+   color: var(--green-500);
+   margin-bottom: 2rem;
+ }
 
 
-.conta {
-    margin-bottom: 2rem;
+ .conta label,
+ .gorjeta label,
+ .pessoas label {
+
+   color: var(--green-500);
+   font-weight: 700;
+ }
+
+ .conta div,
+ .pessoas .input-box {
+   margin-top: 0.4rem;
+   background-color: var(--green-100);
+   padding: 0.4rem 1.2rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   border-radius: 0.3125rem;
 
 
-}
+ }
 
-
-
-
-.conta label {
-  color: var(--green-500);
-  font-weight: 700;
-
-}
-
-.conta div {
-  margin-top: 0.4rem;
-  background-color: var(--green-100);
-  padding: 0.4rem 1.2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
- border-radius: 0.3125rem;
-}
-
-.conta input {
-   border:none;
+ .conta input,
+ .pessoas input {
+   border: none;
    text-align: right;
    width: 100%;
    background: none;
    font-size: 1.5rem;
    font-weight: 700;
    color: var(--green-800);
-}
+   outline: none;
+ }
 
-.conta input::placeholder {
-  color: var(--green-300);
+ .conta input::placeholder,
+ .pessoas input::placeholder {
+   color: var(--green-300);
+
+ }
+
+ .conta:has(input:focus) div,
+ .conta:has(input:hover) div,
+ .pessoas:has(input:focus) .input-box,
+ .pessoas:has(input:hover) .input-box,
+ .gorjeta #outra:focus,
+ .gorjeta #outra:hover {
+   outline: 2px solid var(--light-green);
+   cursor: pointer;
+ }
 
 
-}
+ .gorjeta div {
 
-.conta:has(input:focus) div {
+   margin-top: 1rem;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 1rem;
+ }
 
-outline: 2px solid var(--light-green);
+ .gorjeta input {
+   font-size: 1.5rem;
+   font-weight: 700;
+   border: none;
+   text-align: center;
+   outline: none;
+   padding-block: 0.4rem;
+   border-radius: 0.3125rem;
+   background-color: var(--green-800);
+   color: var(--white);
+ }
 
-.conta:has(input:hover) div,
-.pessoas:has(input:focus) .input-box,
-.pessoas:has(input:hover) .input-box,
-.gorjeta #outra:focus,
-.gorjeta #outra:hover {
-    outline: 2px solid var(--light-green);
-    cursor: pointer;
-}
+ .gorjeta .botao-ativo {
+   background-color: var(--light-green);
+   color: var(--green-800);
+ }
 
-.gorjeta div{
+ .gorjeta input[type="button"]:hover,
+ .resultados button:hover {
+   background-color: var(--green-hover);
+   cursor: pointer;
+ }
 
-    margin-top: 1rem ;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-}
+ .gorjeta #outra {
+   width: 100%;
+   background-color: var(--green-100);
+   color: var(--green-800);
+ }
 
-.gorjeta input{
-    font-size: 1.5rem;
-    font-weight: 700 ;
-    border: none;
-    text-align: center;
-    outline: none;
-    padding-block: 0.4rem;
-    border-radius: 0.3125rem;
-    background-color: var(--green-800);
-    color: var(--white);
-}
+ .gorjeta #outra::placeholder {
+   color: var(--green-300);
+ }
 
-.gorjeta .botao-ativo{
-    background-color: var(--light-green);
-    color: var(--green-800);
-}
+ .conta:has(input:focus) div,
+ .conta:has(input:hover) div,
+ .pessoas:has(input:focus) .input-box,
+ .pessoas:has(input:hover) .input-box,
+ .gorjeta #outra:focus,
+ .gorjeta #outra:hover {
+   outline: 2px solid var(--light-green);
+   cursor: pointer;
+ }
 
-.gorjeta input[type="button"]:hover,
-.resultados button:hover{
-     background-color: var(--green-hover);
-    cursor: pointer;
-}
 
-.gorjeta #outra{
-    width: 100%;
-    background-color: var(--green-100);
-    color: var(--green-800);
-}
+ .gorjeta div {
 
-.gorjeta #outra::placeholder{
-    color: var(--green-300);
+   margin-top: 1rem;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: 1rem;
+ }
 
-    }
-.pessoas .textos{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.pessoas #erro-div {
-    outline: 2px solid var(--danger);
+ .gorjeta input {
+   font-size: 1.5rem;
+   font-weight: 700;
+   border: none;
+   text-align: center;
+   outline: none;
+   padding-block: 0.4rem;
+   border-radius: 0.3125rem;
+   background-color: var(--green-800);
+   color: var(--white);
+ }
 
-    }
-.pessoas #erro{
-  font-size: 0.75rem;
-  color: var(--danger);
-  font-weight: 700;
-  display: none;
-}
+ .gorjeta .botao-ativo {
+   background-color: var(--light-green);
+   color: var(--green-800);
+ }
 
-.resultados{
-    background-color: var(--green-800);
-    border-radius: 0.9375rem;
-    padding: 1.5rem;    
+ .gorjeta input[type="button"]:hover,
+ .resultados button:hover {
+   background-color: var(--green-hover);
+   cursor: pointer;
+ }
 
-    }
+ .gorjeta #outra {
+   width: 100%;
+   background-color: var(--green-100);
+   color: var(--green-800);
+ }
 
-.resultados div div{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+ .gorjeta #outra::placeholder {
+   color: var(--green-300);
+ }
 
-    }
+ .pessoas .textos {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+ }
 
-.resultados p{
-    color: var(--green-400);
-    font-size: 0.8125rem;
-}
+ .pessoas #erro-div {
+   outline: 2px solid var(--danger);
+ }
 
-.resultados p strong{
-    color: var(--white);
-    font-size: 1rem;
-}
+ .pessoas #erro {
+   font-size: 0.75rem;
+   color: var(--danger);
+   font-weight: 700;
+   display: none;
+ }
 
-.resultados div >strong {
-    color: var(--light-green);
-    font-size: 2rem;
-    
-}
-.resultados .gorjeta-total {
-     margin-bottom: 1.25rem;
-}
+ .resultados {
+   background-color: var(--green-800);
+   border-radius: 0.9375rem;
+   padding: 1.5rem;
+ }
 
-.resultados .Total {
-    margin-bottom: 2rem;
-} 
+ .resultados div div {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
 
-.resultados button{
-    width: 100%;
-    background: var(--light-green);
-    border: none;
-    border-radius: 0.3125rem;
-    color: var(--green-800);
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 1.25rem;
-    padding-block: 0.5rem;
-}
+ }
 
-.conta input::-webkit-inner-spin-button ,
-    .pessoas input::-webkit-inner-spin-button,
-    .gorjeta #outra::-webkit-inner-spin-button{
-        display: none;
-    }
+ .resultados p {
+   color: var(--green-400);
+   font-size: 0.8125rem;
+ }
 
-    @media(min-width:920px){
-    body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100svh;
-        justify-content: center;
-        gap: 5rem;
-    }
+ .resultados p strong {
+   color: var(--white);
+   font-size: 1rem;
+ }
 
-    header{
-        padding: 0;
+ .resultados div>strong {
+   color: var(--light-green);
+   font-size: 2rem;
 
-    }
+ }
 
-     main{
-        display: flex;
-        gap: 3rem;
-        padding: 3rem;
-        border-radius: 1.5625rem;
-        max-width: 57.5rem;
-        margin-inline: auto;
-    }
+ .resultados .gorjeta-total {
+   margin-bottom: 1.25rem;
+ }
 
-    main section{
-        width: 100%;
-    }
+ .resultados .Total {
+   margin-bottom: 2rem;
+ }
 
-    .gorjeta div {
+ .resultados button {
+   width: 100%;
+   background: var(--light-green);
+   border: none;
+   border-radius: 0.3125rem;
+   color: var(--green-800);
+   font-weight: 700;
+   text-transform: uppercase;
+   font-size: 1.25rem;
+   padding-block: 0.5rem;
+ }
+
+ .conta input::-webkit-inner-spin-button,
+ .pessoas input::-webkit-inner-spin-button,
+ .gorjeta #outra::-webkit-inner-spin-button {
+   display: none;
+ }
+
+ @media(min-width:920px) {
+   body {
+     display: flex;
+     flex-direction: column;
+     min-height: 100svh;
+     justify-content: center;
+     gap: 5rem;
+   }
+
+   header {
+     padding: 0;
+
+   }
+
+   main {
+     display: flex;
+     gap: 3rem;
+     padding: 3rem;
+     border-radius: 1.5625rem;
+     max-width: 57.5rem;
+     margin-inline: auto;
+   }
+
+
+   main section {
+     width: 100%;
+   }
+
+
+   .gorjeta div {
         grid-template-columns: 1fr 1fr 1fr;
-    }
-
-    .resultados{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between  ;
-        padding: 2.5rem;
-    }
-
-    .resultados div > strong{
-        font-size: 3rem;
-    }
-}
+   }
 
 
+   .resultados {
+       display: flex;
+       flex-direction: column;
+       justify-content: space-between;
+      padding: 2.5rem;
+   }
 
-}
+
+    .resultados div>strong {
+      font-size: 3rem;
+   }
+ }
