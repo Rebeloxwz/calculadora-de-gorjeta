@@ -152,3 +152,17 @@ outline: 2px solid var(--light-green);
     background-color: var(--green-800);
     border-radius: 0.9375rem;
     padding: 1.5rem;    
+
+    }
+
+.resultados div div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    }
+
+.resultados p{
+    color: var(--green-400);
+    font-size: 0.8125rem;
+}
