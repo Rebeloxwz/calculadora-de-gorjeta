@@ -66,3 +66,15 @@ let conta = 0
 
                      }
                     }
+
+                      const botaoLimpar = document.querySelector(".resultados button")
+                    botaoLimpar.addEventListener("click",limpar)
+
+                    function limpar(){
+                        contaInput.value = ""
+
+                        botoesGorjeta.forEach(botao => {
+                            botao.classList.remove("botao-ativo")
+                        })
+                        gorjetaInput.value = ""
+                        pessoasInput.value = ""
