@@ -234,6 +234,18 @@ outline: 2px solid var(--light-green);
         grid-template-columns: 1fr 1fr 1fr;
     }
 
+    .resultados{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between  ;
+        padding: 2.5rem;
+    }
+
+    .resultados div > strong{
+        font-size: 3rem;
+    }
+}
 
 
 
+}
